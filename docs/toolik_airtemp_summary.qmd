@@ -115,14 +115,14 @@ toolik_chlorophyll$active_chl_a_ug_l <- as.numeric(toolik_chlorophyll$active_chl
 
 ```{r}
 ggplot(data = toolik_chlorophyll,
-       aes(x = depth, y = active_chl_a_ug_l)) +
-  geom_point(aes(color = active_chl_a_ug_l),
-             show.legend = FALSE) +
-  scale_color_gradient(low = "blue", high = "orange")
+       aes(x = depth, y = active_chl_a_ug_l, color = active_chl_a_ug_l)) +
+  geom_point(show.legend = FALSE) +
+  scale_color_gradient(low = "blue", high = "orange") +
   theme_minimal() +
   labs(title = "Toolik Chlorophyll Concentrations",
-       x = "Lake depth (meters)",
+        x = "Lake depth (meters)",
        y = "Active chlorophyll concentration (micrograms per liter)")
+
 ```
 
 
